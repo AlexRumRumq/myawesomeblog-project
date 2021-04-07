@@ -9,7 +9,7 @@ class Post(models.Model):
     image = models.ImageField(upload_to='event_images')
 
     def get_summary(self):
-        return self.text[:70]
+        return self.text[:70] + '...'
 
     def __str__(self):
         return self.title
